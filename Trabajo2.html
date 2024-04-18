@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MagoPajas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('kiriko.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 100px;
+            border-radius: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .imagen {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: -1; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <center><h1><span style="color: orange;">OVER</span><span style="color: black;">WATCH</span></h1></center>
+
+        <!-- Video -->
+        <video controls width="640" height="360" style="margin-bottom: 20px;">
+            <source src="video.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+
+        <!-- Audio -->
+        <audio controls style="margin-bottom: 20px;">
+            <source src="audio.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+        
+        <center><a href="https://gamexoce.github.io/micuartapagina">MI OTRA PAGINA</a>
+        <a href="mailto:josemanuel123rodrigues@gmail.com">CONTACTANOS</a></center>
+    </div>
+
+    <!-- Gif fuera del contenedor -->
+    <img class="imagen" src="gif.gif" alt="gif">
+</body>
+</html>
