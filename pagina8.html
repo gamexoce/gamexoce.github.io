@@ -30,43 +30,49 @@
         right: 20px;
         z-index: -1; /* Coloca la imagen detrás del contenido */
     }
-</style>
+    </style>
 </head>
 <body>
-<div class="container">
-<center><h1><span style="color: orange;">OVER</span><span style="color: black;">WATCH</span></h1></center>
+    <div class="container">
+        <center><h1><span style="color: orange;">OVER</span><span style="color: black;">WATCH</span></h1></center>
 
+        <h2>Formulario de Registro</h2>
 
-<h1> Me gusta el OverWatch</h1>
-    <h2>Formulario de Registro</h2>
+        <form action="#" method="post">
 
-    <form action="#" method="post">
-
-    <label for="nombre">Nombre:</label><br>
-    <input type="text" id="nombre" name="nombre" required><br><br>
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+      
+        <label for="apellido">Apellido:</label><br>
+        <input type="text" id="apellido" name="apellido" required><br><br>
+      
+        <label for="sexo">Sexo:</label><br>
+        <input type="radio" id="sexo_m" name="sexo" value="masculino" required>
+        <label for="sexo_m">Masculino</label>
+        <input type="radio" id="sexo_f" name="sexo" value="femenino" required>
+        <label for="sexo_f">Femenino</label><br><br>
   
-    <label for="apellido">Apellido:</label><br>
-    <input type="text" id="apellido" name="apellido" required><br><br>
+        <label for="miembros">Número de miembros de la familia:</label><br>
+        <input type="number" id="miembros" name="miembros" min="1" required><br><br>
+      
+        <label for="idiomas">Idiomas:</label><br>
+        <select id="idiomas" name="idiomas[]" multiple required>
+        <option value="español">Español</option>
+        <option value="inglés">Inglés</option>
+        <option value="francés">Francés</option>
+        <option value="alemán">Alemán</option>
+        </select><br><br>
   
-    <label for="sexo">Sexo:</label><br>
-    <input type="radio" id="sexo_m" name="sexo" value="masculino" required>
-    <label for="sexo_m">Masculino</label>
-    <input type="radio" id="sexo_f" name="sexo" value="femenino" required>
-    <label for="sexo_f">Femenino</label><br><br>
-  
-    <label for="miembros">Número de miembros de la familia:</label><br>
-    <input type="number" id="miembros" name="miembros" min="1" required><br><br>
-  
-    <label for="idiomas">Idiomas:</label><br>
-    <select id="idiomas" name="idiomas[]" multiple required>
-    <option value="español">Español</option>
-    <option value="inglés">Inglés</option>
-    <option value="francés">Francés</option>
-    <option value="alemán">Alemán</option>
-    </select><br><br>
-  
-    <label for="comentario">Comentario adicional:</label><br>
-    <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea><br><br>
+        <label for="comentario">Comentario adicional:</label><br>
+        <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea><br><br>
+      
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Cancelar">
+        
+        <a href="https://gamexoce.github.io/micuartapagina">MI OTRA PAGINA</a>
+        <a href="mailto:josemanuel123rodrigues@gmail.com">CONTACTANOS</a>
+    </div>
+<a href="https://gamexoce.github.io/shania"><img class="imagen" src="imagen3.jpg" alt="imagen3" height=200px width=200px></a>
   
   <input type="submit" value="Enviar">
   <input type="reset" value="Cancelar">
