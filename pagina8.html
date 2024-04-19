@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>pagina8</title>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-image: url('imagen2.jpg');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        animation: fadeIn 2s ease-in-out;
-    }
-    .container {
-        max-width: 800px;
-        margin: 0 auto;
-        background-color: rgba(255, 255, 255, 0.5);
-        padding: 100px;
-        border-radius: 20px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .imagen {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: -1; /* Coloca la imagen detrás del contenido */
-    }
+    <title>MagoPajas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('imagen2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 100px;
+            border-radius: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .imagen {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: -1; /* Coloca la imagen detrás del contenido */
+        }
     </style>
 </head>
 <body>
@@ -51,7 +51,16 @@
         <label for="sexo_m">Masculino</label>
         <input type="radio" id="sexo_f" name="sexo" value="femenino" required>
         <label for="sexo_f">Femenino</label><br><br>
-  
+
+      <label for="departamento">Departamento:</label><br>
+      <select id="departamento" name="departamento">
+        <option value="antioquia">Antioquia</option>
+        <option value="atlantico">Atlántico</option>
+        <option value="bogota">Bogotá D.C.</option>
+        <option value="bolivar">Bolívar</option>
+
+      </select><br><br>
+        
         <label for="miembros">Número de miembros de la familia:</label><br>
         <input type="number" id="miembros" name="miembros" min="1" required><br><br>
       
