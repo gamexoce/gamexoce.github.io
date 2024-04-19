@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>pagina8</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('imagen2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        animation: fadeIn 2s ease-in-out;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 100px;
+        border-radius: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .imagen {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: -1; /* Coloca la imagen detrás del contenido */
+    }
+</style>
+</head>
+<body>
+<div class="container">
+<center><h1><span style="color: orange;">OVER</span><span style="color: black;">WATCH</span></h1></center>
+
+<p><b>BIUS:</b> <b>Negrita,</b> <i>Cursiva,</i> <u>Subrayado,</u> <s>Tachado</s></p>
+
+<h1> Me gusta el OverWatch</h1>
+<h2>Formulario de Registro</h2>
+
+<form action="#" method="post">
+
+  <label for="nombre">Nombre:</label><br>
+  <input type="text" id="nombre" name="nombre" required><br><br>
+  
+  <label for="apellido">Apellido:</label><br>
+  <input type="text" id="apellido" name="apellido" required><br><br>
+  
+  <label for="sexo">Sexo:</label><br>
+  <input type="radio" id="sexo_m" name="sexo" value="masculino" required>
+  <label for="sexo_m">Masculino</label>
+  <input type="radio" id="sexo_f" name="sexo" value="femenino" required>
+  <label for="sexo_f">Femenino</label><br><br>
+  
+  <label for="miembros">Número de miembros de la familia:</label><br>
+  <input type="number" id="miembros" name="miembros" min="1" required><br><br>
+  
+  <label for="idiomas">Idiomas:</label><br>
+  <select id="idiomas" name="idiomas[]" multiple required>
+    <option value="español">Español</option>
+    <option value="inglés">Inglés</option>
+    <option value="francés">Francés</option>
+    <option value="alemán">Alemán</option>
+  </select><br><br>
+  
+  <label for="comentario">Comentario adicional:</label><br>
+  <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea><br><br>
+  
+  <input type="submit" value="Enviar">
+  <input type="reset" value="Cancelar">
+
+</form>
+<img class="imagen" src="imagen3.jpg" alt="imagen3" height=200px widht=200px>
+
+</body>
+</html>
