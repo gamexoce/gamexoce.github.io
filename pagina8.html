@@ -1,94 +1,208 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>MagoPajas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOSE CALLECUSI</title>
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: Arial, sans-serif;
-            background-image: url('hanzo.webp');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            animation: fadeIn 2s ease-in-out;
+            background-color: #ffffff; /* Cambia el color de fondo a blanco */
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.5);
-            padding: 100px;
-            border-radius: 20px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+
+        nav {
+            background-color: #6ab481;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
         }
-        .imagen {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            z-index: -1; 
+
+        nav h2 {
+            margin: 0;
+        }
+
+        form {
+            max-width: 350px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        form div {
+            margin-bottom: 20px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .hola {
+            margin-left: 20px;
+            margin-top: -19px;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form input[type="submit"] {
+            color: #fff;
+            border: none;
+            padding: 10px 23px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            height: 50px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        form {
+            animation: fadeInUp 0.5s ease;
+        }
+
+        .registrar-btn {
+            background-color: #30a157;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 6px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .registrar-btn:hover {
+            background-color: #69b33c;
+        }
+
+        @media screen and (max-width: 600px) {
+            form input[type="submit"] {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <center><h1><span style="color: orange;">OVER</span><span style="color: black;">WATCH</span></h1></center>
+    <nav>
+        <h2>REGISTRO DE TRABAJADORES</h2>
+    </nav>
 
-        <h2>Formulario de Registro</h2>
+    <form action="/submit_formulario" method="post">
+        <div>
+            <label for="RUT">RUT:</label>
+            <input type="text" id="RUT" name="RUT" placeholder="Sin puntos ni guion" required> <!-- Agrega el placeholder -->
+        </div>
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div>
+            <label for="paterno">Apellido Paterno:</label>
+            <input type="text" id="paterno" name="paterno" required>
+        </div>
+        <div>
+            <label for="materno">Apellido Materno:</label>
+            <input type="text" id="materno" name="materno" required>
+        </div>
+        <div class="form-group">
+            <label>Sexo:</label>
+            <br>
+            <div class="radio-container">
+                <input type="radio" id="masculino" name="sexo" value="masculino">
+                <label for="masculino"  class="hola">Masculino</label>
+                <br>
+                <input type="radio" id="femenino" name="sexo" value="femenino">
+                <label for="femenino"  class="hola">Femenino</label>
+            </div>
+        </div>
 
-        <form action="#" method="post">
+        <div class="form-group">
+            <br>
+            <label>Nivel de Estudios:</label>
+            <br>
+            <div class="checkbox-container">
+                <input type="checkbox" id="no_tiene" name="no_tiene" value="no_tiene">
+                <label for="no_tiene"  class="hola">No Tiene</label>
+                <br>
+                <input type="checkbox" id="tecnico" name="tecnico" value="tecnico">
+                <label for="tecnico"  class="hola">Técnico</label>
+                <br>
+                <input type="checkbox" id="universitario" name="universitario" value="universitario">
+                <label for="universitario"  class="hola">Universitario</label>
+            </div>
+        </div>
 
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" required><br><br>
-      
-        <label for="apellido">ID:</label><br>
-        <input type="text" id="apellido" name="apellido" required><br><br>
-      
-        <label for="sexo">Sexo:</label><br>
-        <input type="radio" id="sexo_m" name="sexo" value="masculino" required>
-        <label for="sexo_m">Masculino</label>
-        <input type="radio" id="sexo_f" name="sexo" value="femenino" required>
-        <label for="sexo_f">Femenino</label><br><br>
 
-      <label for="departamento">Juego mas jugado:</label><br>
-      <select id="departamento" name="departamento">
-        <option value="antioquia">OverWatch</option>
-        <option value="atlantico">Fornite</option>
-        <option value="bogota">L4D2</option>
-        <option value="bolivar">GTAV</option>
+        <div>
+            <label for="Ciudad de nacimiento">Ciudad de nacimiento</label>
+            <select id="Ciudad de nacimiento" name="Ciudad de nacimiento" required>
+                <option value="-">-</option>
+                <option value="Beni">Beni</option>
+                <option value="Chuquisaca">Chuquisaca</option>
+                <option value="Cochabamba">Cochabamba</option>
+                <option value="La Paz">La Paz</option>
+                <option value="Oruro">Oruro</option>
+                <option value="Pando">Pando</option>
+                <option value="Potosi">Potosí</option>
+                <option value="Santa Cruz">Santa Cruz</option>
+                <option value="Tarija">Tarija</option>
+            </select>
+        </div>
+        <div>
+            <label for="foto">Curriculum:</label><br>
+            <input type="file" id="cv" name="cv" accept=".pdf, .doc, .docx"><br><br>
+        </div>
+        <div>
+            <label for="foto">Foto:</label><br>
+            <input type="file" id="foto" name="foto" accept="image/*"><br><br>
+        </div>
+        <footer>
+            <input type="button" value="REGISTRAR TRABAJADOR" class="registrar-btn" id="registrarBtn">
+        </footer>
+    </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var btnRegistrar = document.getElementById('registrarBtn');
+            btnRegistrar.addEventListener('click', function () {
+                var mensajeExito = document.getElementById('mensajeExito');
+                mensajeExito.style.display = 'block';
+                setTimeout(function () {
+                    mensajeExito.style.display = 'none';
+                }, 3000);
+            });
+        });
+    </script>
 
-      </select><br><br>
-        
-        <label for="miembros">Horas al dia jugado</label><br>
-        <input type="number" id="miembros" name="miembros" min="1" required><br><br>
-      
-        <b>Pasa tiempo</b><br>
-        <input type="checkbox">
-        <label>Leer</label><br>
-        <input type="checkbox">
-        <label>Musica</label><br>
-        <input type="checkbox">
-        <label>Tomar mate</label><br>
-        <input type="checkbox">
-        <label>Dormir</label><br>
-        <BR>
-  
-        <label for="comentario">Cuentanos tus experiencia en los juegos:</label><br>
-        <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea><br><br>
-      
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Cancelar"><BR>
-        <BR>
-        
-        <a href="https://gamexoce.github.io/micuartapagina">MI OTRA PAGINA</a>
-        <a href="mailto:josemanuel123rodrigues@gmail.com">CONTACTANOS</a>
-        </form> 
-    </div>
-
-    <a href="https://gamexoce.github.io/shania">
-        <img class="imagen" src="gif.gif" alt="gif">
-    </a>
 </body>
 </html>
