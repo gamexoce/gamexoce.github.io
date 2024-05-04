@@ -1,0 +1,107 @@
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6e6e6;
+}
+
+nav {
+    background-color: #2cf8f8;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+form {
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+input[type="file"],
+input[type="button"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+input[type="file"]:focus {
+    border-color: #38c9d0;
+}
+
+.radio-container,
+.checkbox-container {
+    margin-bottom: 20px;
+}
+
+.radio-container label,
+.checkbox-container label {
+    margin-right: 20px;
+}
+.registrar-btn {
+    background-color: #00ffff;
+    border: none;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.registrar-btn:hover {
+    background-color: #00ffff;
+}
+#mensajeExito {
+    display: none;
+    background-color: #00ffff;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    animation: fadeIn 1s ease;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.hola {
+    margin-right: 20px;
+}
+@media screen and (max-width: 600px) {
+    input[type="text"],
+    input[type="email"],
+    select,
+    input[type="file"],
+    input[type="button"] {
+        width: 100%;
+    }
+}
