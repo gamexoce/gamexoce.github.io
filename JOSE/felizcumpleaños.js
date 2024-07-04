@@ -62,10 +62,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Funcionalidad del botón de sorpresa
     surpriseBtn.addEventListener('click', function() {
         surpriseMessage.style.display = 'block';
-        playMusic(); // Reproducir música cuando se presiona el botón de sorpresa
-        document.body.style.backgroundAttachment = 'scroll'; // Fija la imagen de fondo cuando se presiona el botón
+        playMusic();
         setTimeout(() => {
             surpriseMessage.style.display = 'none';
         }, 5000);
     });
 });
+
