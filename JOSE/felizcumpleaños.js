@@ -59,12 +59,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setInterval(createConfetti, 1000);
 
+
     surpriseBtn.addEventListener('click', function() {
-        surpriseMessage.style.display = 'block';
+        alert('Espero que la pasos de lo mejor hoy, aunque avanzas un año mas a tu muerte, que no te impida mejorar, no cambies que eso te hace espeacial');
         playMusic(); 
-        document.body.style.backgroundAttachment = 'scroll'; 
-        setTimeout(() => {
-            surpriseMessage.style.display = 'none';
-        }, 5000);
     });
 });
