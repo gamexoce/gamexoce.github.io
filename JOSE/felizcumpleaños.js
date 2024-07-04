@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     surpriseMessage.textContent = 'Espero que la pases de lo mejor hoy, aunque avanzas un año más a tu muerte, que no te impida mejorar, no cambies que eso te hace especial';
     document.body.appendChild(surpriseMessage);
 
-
+    // Reproducir música de fondo automáticamente
     function playMusic() {
         bgMusic.play().catch(() => {
             bgMusic.play();
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     playMusic();
 
-
+    // Crear globos
     function createBalloon() {
         for (let i = 0; i < 3; i++) {
             const balloon = document.createElement('div');
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setInterval(createBalloon, 500);
 
-
+    // Crear serpentina
     function createConfetti() {
         for (let i = 0; i < 20; i++) {
             const confettiPiece = document.createElement('div');
@@ -59,9 +59,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setInterval(createConfetti, 1000);
 
-
+    // Funcionalidad del botón de sorpresa
     surpriseBtn.addEventListener('click', function() {
-        alert('Espero que estés pasando un buen día. Aunque avanzas un año más hacia tu destino, no dejes de mejorar. No cambies, eso es lo que te hace especial.');
-        playMusic(); 
+        surpriseMessage.style.display = 'block';
+        playMusic(); // Reproducir música cuando se presiona el botón de sorpresa
+        setTimeout(() => {
+            surpriseMessage.style.display = 'none';
+        }, 5000);
     });
 });
