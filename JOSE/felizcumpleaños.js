@@ -61,11 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Funcionalidad del botón de sorpresa
     surpriseBtn.addEventListener('click', function() {
-        surpriseMessage.style.display = 'block';
-        playMusic();
-        setTimeout(() => {
-            surpriseMessage.style.display = 'none';
-        }, 5000);
+        alert('Espero que estés pasando un buen día. Aunque avanzas un año más hacia tu destino, no dejes de mejorar. No cambies, eso es lo que te hace especial.');
+        playMusic(); // Reproducir música cuando se presiona el botón de sorpresa
     });
 });
-
